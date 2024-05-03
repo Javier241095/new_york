@@ -1,0 +1,188 @@
+/*TIPOGRAFIA*/
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/****************ESTILOS GENERALES****************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+p{
+    line-height: 1.275rem;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+}
+
+p, ul li, a, button{
+    font-size: .875rem;
+    color: #646464;
+}
+
+/***ESTILO PARA LA NAVEGACION MOBILE***/
+
+/*H1 LOGO MOBILE*/
+h1{
+    font-size: 14px;
+    font-family: "Michroma", sans-serif;
+    color: #262626;
+    -webkit-text-stroke: 0.4px #262626;
+    letter-spacing: 1px;
+    padding-left: 1rem;
+    padding-top: 1px;
+}
+
+/*BARRA DE NAVEGACION*/
+header > div:first-child{
+    margin: 1rem 10px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 2px 0;
+    display:  flex;
+    justify-content: space-between;
+}
+
+/*ICONO DEL MENU HAMBURGUESA*/
+nav > button{
+    width: 22px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    top: -2px;
+    right: 16px;
+    border: none;
+    background-color: transparent;
+}
+
+/*Se crea el icono del menu hamburguesa y su animacion para mostras los dos estados activo y no activo*/
+button > span{
+    width: 100%;
+    height: 3px;
+    background-color: #F26262;
+    display: block;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%);
+    transition: transform 0.4s, width 0.5s;
+    z-index: 2;
+}
+
+button > span:first-child{
+    transform: translate(-50%, -8px);
+}
+
+button > span:nth-of-type(2){
+    width: 16px;
+}
+
+button > span:last-child{
+    transform: translate(-50%, 5px);
+}
+
+/*Esta accion de activar el menu se manipula atraves del JS (menuAnimado.js)*/
+.activoX span:first-child{
+    transform: translate(-50%, -50%)rotate(45deg);
+}
+
+.activoX span:nth-of-type(2){
+    width: 0;
+}
+
+.activoX span:last-child{
+    transform: translate(-50%, -50%)rotate(-45deg);
+}
+
+/*////////////////MENU DE NAVEGACION////////////////*/
+
+/**Menu oculto**/
+header > div nav > ul{
+    width: calc(100vw - 20px);
+    height: calc(100vh - 80px);
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    background-color: #f2f2f2;
+    padding: 0 1rem;
+    border-radius: 20px;
+
+    transform-origin: top;
+    transform: scaleY(0);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+/**Menu visible**/
+header > div:nth-of-type(1) nav .menuVisible{
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+
+/**Estilos para los enlaces (li a)**/
+header > div nav > ul li,
+header > div nav > ul li a{
+    font-weight: 700;
+    overflow: hidden;
+}
+
+header > div nav > ul li > ul li a{
+    font-weight: 600;
+    color: #797979;
+}
+
+header > div nav > ul li a{
+    margin: 6px 0;
+    padding: 10px 0;
+}
+
+header > div nav > ul li:nth-child(2):not(ul li > ul li){
+    background:url(../img/iconos/flecha_derecha.png) no-repeat;
+    background-size: 18px;
+    background-position: 150px 1px;
+}
+
+header > div nav > ul li:nth-child(3):not(ul li > ul li){
+    margin: 6px 0;
+    padding: 10px 0;
+    background:url(../img/iconos/flecha_derecha.png) no-repeat;
+    background-size: 18px;
+    background-position: 150px 10px;
+}
+
+header > div nav ul li > ul{
+    height: 0;
+    transition: height .4s;
+}
+
+header > div nav > ul li > ul li a{
+    padding-left: 1rem;
+}
+
+/**Estilo de boton subcripsion**/
+nav > ul button{
+    font-weight: 700;
+    color: #f2f2f2;
+    background-color: #F26262;
+    border: none;
+    padding: 5px 1rem;
+    border-radius: 20px;
+}
+
+/**Este estilo se aplica para indicar en que pagina se encuentra actialmente el usuario 
+Para aplicar este estilo se utiliza el archico JS(linkActivo.js)**/
+.linkActive{
+    font-weight: 700;
+    color: #F58989;
+}
+
