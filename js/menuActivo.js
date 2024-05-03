@@ -2,7 +2,7 @@
 let d = document;
 
 let MenuButton = d.querySelector('nav > button');
-let navUl = d.querySelector('header div nav ul');
+let navUl = d.querySelector('header div nav div');
 
 MenuButton.addEventListener('click', ()=>{
     //Esta clase se aplica para animar el icono del menu cambiando al icono de cerra (X) y viseversa.
@@ -23,7 +23,8 @@ navUl.addEventListener('click', (e)=>{
 //La class "menuVisible" esta en la linea 93 hasta la 103.
 
 let subMenu = d.querySelectorAll('header > div nav ul li')[1]
+let liUl = d.querySelector('header > div nav ul li span')
 
 subMenu.addEventListener('click', (e)=>{
-    subMenu.classList.toggle('arrow')
+    liUl.classList.toggle('arrow')
 })

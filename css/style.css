@@ -55,7 +55,7 @@ nav > button{
     width: 22px;
     height: 20px;
     position: relative;
-    top: -2px;
+    top: -3px;
     right: 16px;
     border: none;
     background-color: transparent;
@@ -104,7 +104,7 @@ button > span:last-child{
 /*////////////////MENU DE NAVEGACION////////////////*/
 
 /**Menu oculto**/
-header > div nav > ul{
+header > div nav div{
     width: calc(100vw - 20px);
     height: calc(100vh - 80px);
     position: fixed;
@@ -114,11 +114,11 @@ header > div nav > ul{
     padding: 0 1rem;
     border-radius: 20px;
 
-    transform-origin: top;
+    /*transform-origin: top;
     transform: scaleY(0);
     visibility: hidden;
     opacity: 0;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease;*/
 }
 /**Menu visible**/
 header > div:nth-of-type(1) nav .menuVisible{
@@ -129,39 +129,49 @@ header > div:nth-of-type(1) nav .menuVisible{
 }
 
 /**Estilos para los enlaces (li a)**/
-header > div nav > ul li,
-header > div nav > ul li a{
+header > div nav div > ul li,
+header > div nav div > ul li a{
     font-weight: 700;
-    overflow: hidden;
 }
 
-header > div nav > ul li > ul li a{
+header > div nav div > ul li > ul li a{
     font-weight: 600;
     color: #797979;
 }
 
-header > div nav > ul li a{
+header > div nav div > ul li a{
     margin: 6px 0;
     padding: 10px 0;
 }
 
-header > div nav > ul li:nth-child(2):not(ul li > ul li){
-    background:url(../img/iconos/flecha_derecha.png) no-repeat;
-    background-size: 18px;
-    background-position: 150px 1px;
+header > div nav div > ul li:nth-child(2):not(ul li > ul li),
+header > div nav div > ul li:nth-child(3):not(ul li > ul li){
+    
+    
 }
 
-header > div nav > ul li:nth-child(3):not(ul li > ul li){
-    margin: 6px 0;
-    padding: 10px 0;
-    background:url(../img/iconos/flecha_derecha.png) no-repeat;
-    background-size: 18px;
-    background-position: 150px 10px;
+nav div ul li span{
+    display: block;
+    height: 16px;
+    width: 16px;
+    position: relative;
+    top: -3px;
+    background-image:url(../img/iconos/flecha_derecha.png);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    transition: transform 0.3s;
+    
 }
 
-header > div nav ul li > ul{
+header > div nav div ul li > ul{
     height: 0;
-    transition: height .4s;
+    visibility: hidden;
+    transition: height.4s;
+}
+
+.arrow{
+    transform:  rotate(90deg);
+    
 }
 
 header > div nav > ul li > ul li a{
@@ -169,19 +179,20 @@ header > div nav > ul li > ul li a{
 }
 
 /**Estilo de boton subcripsion**/
-nav > ul button{
+nav div button{
     font-weight: 700;
     color: #f2f2f2;
     background-color: #F26262;
     border: none;
     padding: 5px 1rem;
     border-radius: 20px;
+    margin: 16px 0;
 }
 
 /**Este estilo se aplica para indicar en que pagina se encuentra actialmente el usuario 
 Para aplicar este estilo se utiliza el archico JS(linkActivo.js)**/
 .linkActive{
     font-weight: 700;
-    color: #F58989;
+    color: #F26262;
 }
 
