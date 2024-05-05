@@ -22,9 +22,18 @@ navUl.addEventListener('click', (e)=>{
 //La class "activo" esta en la linea 125.
 //La class "menuVisible" esta en la linea 93 hasta la 103.
 
-let subMenu = d.querySelectorAll('header > div nav ul li')[1]
-let liUl = d.querySelector('header > div nav ul li span')
 
-subMenu.addEventListener('click', (e)=>{
-    liUl.classList.toggle('arrow')
-})
+let menu = d.querySelectorAll('header > div nav > div')[0]
+
+let button =  d.querySelector('header > div nav > div button')
+
+let subMenu = d.querySelectorAll('header > div nav ul .subMenu')
+let liUl = d.querySelectorAll('header > div nav ul li span')
+
+for (let i = 0; i < subMenu.length; i++) {
+    subMenu[i].addEventListener('click', (e)=>{
+        subMenu[i].classList.toggle('marginTop')
+        subMenu[i].classList.toggle('subMenu')
+        liUl[i].classList.toggle('arrow')
+    })
+}

@@ -31,23 +31,24 @@ p, ul li, a, button{
 
 /*H1 LOGO MOBILE*/
 h1{
+    width: fit-content;
     font-size: 14px;
     font-family: "Michroma", sans-serif;
     color: #262626;
     -webkit-text-stroke: 0.4px #262626;
     letter-spacing: 1px;
     padding-left: 1rem;
-    padding-top: 1px;
 }
 
 /*BARRA DE NAVEGACION*/
 header > div:first-child{
+    height: 40px;
     margin: 1rem 10px;
     background-color: #f2f2f2;
     border-radius: 20px;
-    padding: 2px 0;
     display:  flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 /*ICONO DEL MENU HAMBURGUESA*/
@@ -106,9 +107,9 @@ button > span:last-child{
 /**Menu oculto**/
 header > div nav div{
     width: calc(100vw - 20px);
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     position: fixed;
-    top: 60px;
+    top: 72px;
     left: 10px;
     background-color: #f2f2f2;
     padding: 0 1rem;
@@ -131,11 +132,14 @@ header > div:nth-of-type(1) nav .menuVisible{
 /**Estilos para los enlaces (li a)**/
 header > div nav div > ul li,
 header > div nav div > ul li a{
+    font-size: 1rem;
     font-weight: 700;
 }
 
 header > div nav div > ul li > ul li a{
+    font-size: .875rem;
     font-weight: 600;
+    padding-left: 1rem;
     color: #797979;
 }
 
@@ -144,21 +148,30 @@ header > div nav div > ul li a{
     padding: 10px 0;
 }
 
-header > div nav div > ul li:nth-child(2):not(ul li > ul li),
-header > div nav div > ul li:nth-child(3):not(ul li > ul li){
-    
-    
+header > div nav div > ul .subMenu{
+    margin: 6px 0;
+    padding: 10px 0;
+    transition: margin .3s ease-in;
+    transition: padding .3s ease-in;
+}
+
+header > div nav div > ul .marginTop{
+    margin-top: 6px;
+    padding-top: 10px;
+    transition: margin .3s ease-in;
+    transition: padding .3s ease-in;
 }
 
 nav div ul li span{
-    display: block;
+    display: inline-block;
     height: 16px;
     width: 16px;
     position: relative;
-    top: -3px;
+    top: 4px;
+    left: 100px;
     background-image:url(../img/iconos/flecha_derecha.png);
     background-repeat: no-repeat;
-    background-size: 14px;
+    background-size: 16px;
     transition: transform 0.3s;
     
 }
@@ -180,13 +193,17 @@ header > div nav > ul li > ul li a{
 
 /**Estilo de boton subcripsion**/
 nav div button{
+    width: calc(100% - 32px);
+    height: 40px;
     font-weight: 700;
     color: #f2f2f2;
     background-color: #F26262;
     border: none;
     padding: 5px 1rem;
     border-radius: 20px;
-    margin: 16px 0;
+    margin:auto;
+    position: absolute;
+    top: calc(567px - 40px - 16px);
 }
 
 /**Este estilo se aplica para indicar en que pagina se encuentra actialmente el usuario 
