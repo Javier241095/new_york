@@ -25,6 +25,9 @@ navUl.addEventListener('click', (e)=>{
 
 let menu = d.querySelectorAll('header > div nav > div')[0]
 
+let altoMenu = `${menu.clientHeight - 100}px`;
+menu.style.setProperty("--altoMenu", altoMenu);
+
 let button =  d.querySelector('header > div nav > div button')
 
 let subMenu = d.querySelectorAll('header > div nav ul .subMenu')
