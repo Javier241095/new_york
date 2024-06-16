@@ -27,6 +27,11 @@ p, ul li, a, button{
     color: #646464;
 }
 
+img{
+    display: block;
+    max-width: 100%;
+}
+
 /***ESTILO PARA LA NAVEGACION MOBILE***/
 
 /*H1 LOGO MOBILE*/
@@ -216,4 +221,38 @@ Para aplicar este estilo se utiliza el archico JS(linkActivo.js)**/
 .linkActive{
     font-weight: 700;
     color: #F26262;
+}
+
+header > div:last-child{
+    position: relative;
+}
+
+header > div:last-child figure img{
+    margin: auto;
+    border-radius: 20px;
+}
+
+header > div:last-child ul{
+    position: absolute;
+    bottom: 1rem;
+    right: 20px;
+}
+
+
+header > div:last-child ul li a{
+    width: 20px;
+    height: 20px;
+    padding: 12px;
+    font-size: 0;
+}
+
+header > div:last-child ul li:first-child a{
+    background: url(../img/iconos/facebook.png) no-repeat center center;
+    background-size: 20px;
+    margin-bottom: 1rem;
+}
+
+header > div:last-child ul li:last-child a{
+    background: url(../img/iconos/instagram.png) no-repeat center center;
+    background-size: 20px;
 }
