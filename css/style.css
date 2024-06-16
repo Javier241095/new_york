@@ -30,6 +30,7 @@ p, ul li, a, button{
 img{
     display: block;
     max-width: 100%;
+    line-height: 0;
 }
 
 /***ESTILO PARA LA NAVEGACION MOBILE***/
@@ -225,7 +226,7 @@ Para aplicar este estilo se utiliza el archico JS(linkActivo.js)**/
 }
 
 header > div:last-child{
-    width: calc(100vw - 16px);
+    width: calc(100vw - 20px);
     position: relative;
     background-color: #eaeff3;
     border-radius: 20px;
@@ -234,6 +235,7 @@ header > div:last-child{
 
 header > div:last-child figure img{
     border-radius: 20px;
+    margin: auto;
 }
 
 header > div:last-child ul{
