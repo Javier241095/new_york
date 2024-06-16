@@ -56,7 +56,7 @@ nav > button{
     width: 22px;
     height: 20px;
     position: relative;
-    top: 2px;
+    top: -3px;
     right: 16px;
     border: none;
     background-color: transparent;
@@ -107,7 +107,7 @@ button > span:last-child{
 /**Menu oculto**/
 header > div nav div{
     width: calc(100vw - 20px);
-    height: calc(100vh - 72px - 1rem);
+    height: calc(100vh - 72px - 2rem);
     position: fixed;
     top: 72px;
     left: 10px;
