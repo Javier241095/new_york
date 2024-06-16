@@ -35,7 +35,7 @@ h1{
     font-size: 14px;
     font-family: "Michroma", sans-serif;
     color: #262626;
-    -webkit-text-stroke: 0.4px #262626;
+    -webkit-text-stroke: 0.8px #262626;
     letter-spacing: 1px;
     padding-left: 1rem;
 }
@@ -56,7 +56,7 @@ nav > button{
     width: 22px;
     height: 20px;
     position: relative;
-    top: -3px;
+    top: 2px;
     right: 16px;
     border: none;
     background-color: transparent;
@@ -107,7 +107,7 @@ button > span:last-child{
 /**Menu oculto**/
 header > div nav div{
     width: calc(100vw - 20px);
-    height: calc(100vh - 6rem);
+    height: calc(100vh - 72px - 1rem);
     position: fixed;
     top: 72px;
     left: 10px;
@@ -147,21 +147,13 @@ header > div nav div > ul li a{
     margin: 6px 0;
     padding: 10px 0;
 }
-
-header > div nav div > ul .subMenu{
+/*HEADER > DIV NAV DIV > UL LI"CLASS subMenus"*/
+header > div nav div > ul .subMenus{
     margin: 6px 0;
     padding: 10px 0;
-    transition: margin .3s ease-in;
-    transition: padding .3s ease-in;
 }
 
-header > div nav div > ul .marginTop{
-    margin-top: 6px;
-    padding-top: 10px;
-    transition: margin .3s ease-in;
-    transition: padding .3s ease-in;
-}
-
+/*Icono de flecha al costado delsub menu*/
 nav div ul li span{
     display: inline-block;
     height: 16px;
@@ -176,15 +168,22 @@ nav div ul li span{
     
 }
 
+/*Esta clase rota la flecha hacia abajo al desplegar el sub menu*/
+.flecha_abajo{
+    transform:  rotate(90deg);
+}
+
 header > div nav div ul li > ul{
     height: 0;
     visibility: hidden;
-    transition: height.4s;
+    opacity: 0;
+    transition: all 0.4s ease;
 }
 
-.arrow{
-    transform:  rotate(90deg);
-    
+.altoSubMenu{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.4s ease;
 }
 
 header > div nav > ul li > ul li a{
