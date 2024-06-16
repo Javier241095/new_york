@@ -107,7 +107,7 @@ button > span:last-child{
 /**Menu oculto**/
 header > div nav div{
     width: calc(100vw - 20px);
-    height: calc(100vh - 72px - 4rem);
+    height: calc(100vh - 72px - 5rem);
     position: fixed;
     top: 72px;
     left: 10px;
