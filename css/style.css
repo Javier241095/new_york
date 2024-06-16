@@ -263,3 +263,13 @@ header > div:last-child ul li:last-child a{
     background-size: 20px;
 }
 
+
+section h2{
+    text-transform: uppercase;
+    font-family: Michroma;
+    -webkit-text-stroke: 2px;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-left: 1rem;
+    color: #404040;
+}
